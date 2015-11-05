@@ -3,7 +3,7 @@
 A simple Todo app with Angular using GraphQL as the data source.
 **(This app has optimistic updates support)**
 
-![A Angular Todo App with GraphQL](https://cldup.com/Y71WEMYzG2.png)
+[![A Angular Todo App with GraphQL](https://cldup.com/Y71WEMYzG2.png)](https://graphql-angular-todo.herokuapp.com/)
 
 > This project is extended from [this](http://codepen.io/anon/pen/KdxXRP) Codepen example. Kudos to the original author.
 
