@@ -6,10 +6,11 @@ function GraphQLTransport(path) {
 }
 
 GraphQLTransport.prototype.sendQuery = function (query, vars) {
+  var self = this;
   vars = vars || {};
-  return new Promise((resolve, error) => {
+  return new Promise(function(resolve, reject) {
     // use fetch to get the result
-    fetch(this.path, {
+    fetch(self.path, {
       method: 'post',
       headers: {
         'Accept': 'application/json',
@@ -21,15 +22,17 @@ GraphQLTransport.prototype.sendQuery = function (query, vars) {
       })
     })
     // get the result as JSON
-    .then(res => res.json())
-    // trigger result or error
-    .then(response => {
+    .then(function(res) {
+      return res.json();
+    })
+    // trigger result or reject
+    .then(function(response) {
       if(response.errors) {
-        return error(response.errors);
+        return reject(response.errors);
       }
 
       return resolve(response.data);
     })
-    .catch(error);
+    .catch(reject);
   });
 };
