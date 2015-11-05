@@ -1,0 +1,75 @@
+body {
+  background: #13756D;
+  font-family: Arial;
+}
+
+.todo-wrapper {
+  background: #55B6AE;
+  width: 100%;
+}
+
+h2 {
+  font-size: 2em;
+  background: #1CA89C;
+  padding: 40px;
+  margin: 0;
+  color: #333;
+  text-align: center;
+ }
+.emphasis {
+  font-size: 4em;
+  color: #fff;
+}
+
+ul {
+  padding: 0px;
+  margin: 0px;
+}
+
+li {
+  font-size: 1.3em;
+  padding: 18px;
+
+  background: #65d8cb; /* Old browsers */
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#65d8cb), to(#72f4e9));
+  background: -webkit-linear-gradient(#65d8cb 0%, #72f4e9 100%);
+  background: -moz-linear-gradient(#65d8cb 0%, #72f4e9 100%);
+  background: -o-linear-gradient(#65d8cb 0%, #72f4e9 100%);
+  background: linear-gradient(#65d8cb 0%, #72f4e9 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#65d8cb', endColorstr='#72f4e9',GradientType=0 );
+  list-style-type: none;
+  margin-left: 0px;
+  padding-left: 20px;
+}
+
+li input[type="checkbox"] {
+  width: 40px;
+}
+
+.done-true {
+  text-decoration: line-through;
+  color: #ddd;
+}
+
+.add-input {
+  width: 60%;
+  height: 20px;
+  float: left;
+  border: none;
+  padding: 53px 0;
+  font-size: 2em;
+  text-indent: 55px;
+}
+.add-btn {
+  width: 40%;
+  border: none;
+  background: #29F4E3;
+  padding: 0;
+  height: 100px;
+  h2 {
+   background: #29F4E3;
+   padding: 0;
+   font-size: 4em;
+   color: #333;
+  }
+}

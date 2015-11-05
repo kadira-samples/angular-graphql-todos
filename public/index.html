@@ -1,0 +1,25 @@
+<html ng-app>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/0.10.1/fetch.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.0.5/bluebird.min.js"></script>
+    <link href='/style.css' rel='stylesheet'>
+    <script src="/graphql_transport.js"></script>
+    <script src="/app.js"></script>
+  </head>
+  <body>
+    <div class="todo-wrapper" ng-controller="TodoCtrl">
+      <h2>You've got <span class="emphasis">{{getTotalTodos()}}</span> things to do</h2>
+      <ul>
+        <li ng-repeat="todo in todos">
+          <span class="done-{{todo.done}}">{{todo.text}}</span>
+        </li>
+      </ul>
+      <form>
+        <input class="add-input" placeholder="I need to..." type="text" ng-model="formTodoText" ng-model-instant />
+        <button class="add-btn" ng-click="addTodo()"><h2>Add</h2></button>
+      </form>
+    </div>
+  </body>
+</html>
